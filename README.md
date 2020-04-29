@@ -38,7 +38,7 @@ In `config.json`, add the following plugin definition:
 "plugins": [
     ...
     {
-        "uri": "plugin://adetante/besu?v=1.0.1",
+        "uri": "plugin://adetante/besu?v=1.0.2",
         "config": {
             "loginUrl": "https://my_besu_node/login",
             "allowUnsecuredAuthentication": false // OPTIONAL
@@ -60,9 +60,9 @@ Update the `plugin://aleth.io/eth-lite` configuration with the link to the new d
 "plugins": [
     ...,
     {
-        "uri": "plugin://aleth.io/eth-lite?v=4.1.1",
+        "uri": "plugin://aleth.io/eth-lite?v=4.2.0",
         "config": {
-            "nodeUrl": "https://my_besu_node:8545",
+            "nodeUrl": "https://my_besu_node",
             "authStoreUri": "adapter://adetante/besu/auth-store"
         }
     },
@@ -71,3 +71,26 @@ Update the `plugin://aleth.io/eth-lite` configuration with the link to the new d
 ```
 
 * Add the `authStoreUri` attribute to the eth-lite configuration with the value `adapter://adetante/besu/auth-store` to link eth-lite to this plugin
+
+## Required Besu permissions
+
+The minimum [JSON-RPC permissions](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/Authentication/#json-rpc-permissions) required to use Alethio Explorer are:
+
+```
+permissions = [
+    "eth:getBlockByHash",
+    "eth:getBlockByNumber",
+    "eth:getBlockTransactionCountByHash",
+    "eth:getBlockTransactionCountByNumber",
+    "eth:blockNumber",
+    "eth:getTransactionByHash",
+    "eth:getTransactionReceipt",
+    "eth:getBalance",
+    "eth:getCode",
+    "eth:getUncleByBlockHashAndIndex",
+    "eth:getUncleByBlockNumberAndIndex",
+    "net:peerCount"
+]
+```
+
+To be defined in the Besu `toml` credentials file.

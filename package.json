@@ -1,6 +1,6 @@
 {
   "name": "@adetante/explorer-besu-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "adetante",
   "pluginName": "besu",
   "description": "Alethio Explorer plugin that provides support for Hyperledger Besu authentication",
@@ -24,8 +24,12 @@
     "access": "public"
   },
   "keywords": [
-		"ethereum", "alethio", "explorer", "besu", "web3"
-	],
+    "ethereum",
+    "alethio",
+    "block explorer",
+    "besu",
+    "web3"
+  ],
   "engines": {
     "@alethio/cms": "^1.0.0-beta.12"
   },
@@ -36,13 +40,13 @@
     "fork-ts-checker-webpack-plugin": "^0.4.15",
     "mobx": "^5.15.4",
     "mobx-react": "^5.4.4",
-    "plugin-api": "npm:@alethio/cms-plugin-api@^1.0.0-beta.12",
+    "plugin-api": "npm:@alethio/cms-plugin-api@^1.0.0-beta.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rimraf": "^2.6.3",
     "source-map-loader": "^0.2.3",
     "source-map-support": "^0.4.14",
-    "styled-components": "^3.4.2",
+    "styled-components": "^3.4.10",
     "ts-loader": "^4.4.2",
     "tslib": "^1.9.3",
     "tslint": "^5.15.0",
@@ -56,7 +60,6 @@
     "webpack-runner": "^3.1.0"
   },
   "dependencies": {
-    "@alethio/explorer-ui": "^1.0.0",
-    "@alethio/ui": "^1.1.1"
+    "@alethio/ui": "^2.0.0-beta.0"
   }
 }
