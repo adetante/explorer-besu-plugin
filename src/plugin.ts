@@ -12,14 +12,10 @@ const plugin: IPlugin = {
         const authStore = new AuthStore(config.getLoginUrl(), logger);
         const adapter = new AuthAdapter(authStore);
 
-        if ( config.getLoginUrl().startsWith("http://") && !config.isAllowedUnsecuredAuthentication()) {
-                logger.error("Unsecured authentication disabled and loginUrl is HTTP!");
-        } else {
-            api.addDataAdapter("adapter://adetante/besu/auth-store", adapter);
+        api.addDataAdapter("adapter://adetante/besu/auth-store", adapter);
 
-            if (!authStore.isAuthenticated) {
-                renderLoginForm(authStore);
-            }
+        if (!authStore.isAuthenticated) {
+            renderLoginForm(authStore);
         }
     },
 

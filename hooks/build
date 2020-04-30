@@ -1,0 +1,7 @@
+#!/bin/bash
+# hooks/build
+# https://docs.docker.com/docker-cloud/builds/advanced/
+
+docker build \
+    --build-arg PLUGIN_VERSION=$DOCKER_TAG \
+    -t $IMAGE_NAME .

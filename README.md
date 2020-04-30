@@ -40,10 +40,9 @@ In `config.json`, add the following plugin definition:
 "plugins": [
     ...
     {
-        "uri": "plugin://adetante/besu?v=1.0.2",
+        "uri": "plugin://adetante/besu?v=1.0.3",
         "config": {
-            "loginUrl": "https://my_besu_node/login",
-            "allowUnsecuredAuthentication": false // OPTIONAL
+            "loginUrl": "https://my_besu_node/login"
         }
     }
     ...
@@ -54,8 +53,6 @@ In `config.json`, add the following plugin definition:
 * `loginUrl` is the login endpoint.
  When using [Besu default username/password authentication](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/Authentication/#username-and-password-authentication), this URL is the JSON-RPC HTTP url with `/login` suffix.
  If you use [Besu JWT public key authentication](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/Authentication/#jwt-public-key-authentication), this URL can point to your own token distribution endpoint. Your login endpoint must accept `POST` requests with body `{ "username": "xxx", "password": "xxx" }` and return a JSON response with `{ "token": "xxx" }`
-
-* By default, the plugin will accept only authentication on HTTPS URL. If your login uses HTTP, you must explicitly add the option `"allowUnsecuredAuthentication": true` in the plugin configuration.
 
 Update the `plugin://aleth.io/eth-lite` configuration with the link to the new data adapter:
 ```
@@ -96,3 +93,17 @@ permissions = [
 ```
 
 To be defined in the Besu `toml` credentials file.
+
+## Running in Docker
+
+A Docker image based on [ethereum-lite-explorer](https://hub.docker.com/r/alethio/ethereum-lite-explorer) is available on [Docker Hub](https://hub.docker.com/r/adetante/explorer-besu-plugin).
+
+Just run
+
+```
+$ docker run -e APP_NODE_URL="https://my_besu_node" -p 80:80 adetante/explorer-besu-plugin:1.0.3
+```
+
+with the environment variable `APP_NODE_URL` referring to the JSON-RPC endpoint of Besu node.
+
+This image uses the default `config.json` file, and sets `${APP_NODE_URL}` as `nodeUrl` for `eth-lite` plugin and `${APP_NODE_URL}/login` as `loginUrl` for Besu plugin. You can override `config.json` by mounting a custom configuration file in `/usr/share/nginx/html/config.json` (see [Alethio Explorer: Running in Docker](https://github.com/Alethio/ethereum-lite-explorer#running-in-docker))
