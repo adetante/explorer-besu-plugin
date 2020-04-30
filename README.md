@@ -1,5 +1,7 @@
 # explorer-besu-plugin
 
+![Build](https://github.com/adetante/explorer-besu-plugin/workflows/Build/badge.svg)
+
 [Alethio Explorer](https://github.com/Alethio/ethereum-lite-explorer) plugin that provides support for Hyperledger Besu authentication.
 
 [Hyperledger Besu supports authentication on JSON-RPC endpoint](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/Authentication/) using a Bearer token in the `Authorization` header of JSON-RPC requests.
