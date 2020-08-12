@@ -1,6 +1,6 @@
 {
   "name": "@adetante/explorer-besu-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "adetante",
   "pluginName": "besu",
   "description": "Alethio Explorer plugin that provides support for Hyperledger Besu authentication",
@@ -34,11 +34,11 @@
     "@alethio/cms": "^1.0.0-beta.12"
   },
   "devDependencies": {
-    "@types/react": "^16.8.12",
-    "@types/react-dom": "^16.8.3",
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
     "@types/webpack-env": "^1.13.0",
     "fork-ts-checker-webpack-plugin": "^0.4.15",
-    "mobx": "^5.15.4",
+    "mobx": "^5.15.5",
     "mobx-react": "^5.4.4",
     "plugin-api": "npm:@alethio/cms-plugin-api@^1.0.0-beta.8",
     "react": "^16.13.1",
@@ -48,18 +48,18 @@
     "source-map-support": "^0.4.14",
     "styled-components": "^3.4.10",
     "ts-loader": "^4.4.2",
-    "tslib": "^1.9.3",
+    "tslib": "^1.13.0",
     "tslint": "^5.15.0",
-    "typescript": "^3.4.1",
+    "typescript": "^3.9.7",
     "typescript-styled-plugin": "^0.14.0",
     "typescript-tslint-plugin": "^0.3.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "web3-eth": "^1.2.7",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.1.2",
+    "web3-eth": "^1.2.11",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
     "webpack-runner": "^3.1.0"
   },
   "dependencies": {
-    "@alethio/ui": "^2.0.0-beta.0"
+    "@alethio/ui": "^2.0.0-dev.17"
   }
 }

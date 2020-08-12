@@ -40,7 +40,7 @@ In `config.json`, add the following plugin definition:
 "plugins": [
     ...
     {
-        "uri": "plugin://adetante/besu?v=1.0.3",
+        "uri": "plugin://adetante/besu?v=1.0.4,
         "config": {
             "loginUrl": "https://my_besu_node/login"
         }
@@ -101,7 +101,7 @@ A Docker image based on [ethereum-lite-explorer](https://hub.docker.com/r/alethi
 Just run
 
 ```
-$ docker run -e APP_NODE_URL="https://my_besu_node" -p 80:80 adetante/explorer-besu-plugin:1.0.3
+$ docker run -e APP_NODE_URL="https://my_besu_node" -p 80:80 adetante/explorer-besu-plugin:1.0.4
 ```
 
 with the environment variable `APP_NODE_URL` referring to the JSON-RPC endpoint of Besu node.
