@@ -44,10 +44,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rimraf": "^2.6.3",
-    "source-map-loader": "^0.2.3",
+    "source-map-loader": "^4.0.1",
     "source-map-support": "^0.4.14",
     "styled-components": "^3.4.10",
-    "ts-loader": "^4.4.2",
+    "ts-loader": "^9.4.2",
     "tslib": "^1.13.0",
     "tslint": "^5.15.0",
     "typescript": "^3.9.7",
@@ -55,8 +55,8 @@
     "typescript-tslint-plugin": "^0.3.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "web3-eth": "^1.2.11",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "webpack-runner": "^3.1.0"
   },
   "dependencies": {
